@@ -1,0 +1,1 @@
+mocha -R spec --check-leaks --timeout 30000 test/

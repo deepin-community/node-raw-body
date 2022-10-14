@@ -1,0 +1,38 @@
+Source: node-raw-body
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Jérémy Lal <kapouer@melix.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 13)
+ , mocha <!nocheck>
+ , node-bytes <!nocheck>
+ , node-http-errors <!nocheck>
+ , node-iconv <!nocheck>
+ , node-unpipe <!nocheck>
+ , node-readable-stream <!nocheck>
+ , node-safe-buffer <!nocheck>
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-raw-body
+Vcs-Git: https://salsa.debian.org/js-team/node-raw-body.git
+Homepage: https://github.com/stream-utils/raw-body
+Rules-Requires-Root: no
+
+Package: node-raw-body
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+ , node-bytes
+ , node-http-errors
+ , node-iconv
+ , node-unpipe
+Provides: nodetypes-raw-body (= ${source:Version})
+Description: Request body length validation supporting streams - Node.js
+ This module gets the entire buffer of a stream and validates its length
+ against an expected length. A limit can also be set, preventing memory
+ exhaustion. It is useful for parsing request bodies.
+ .
+ Node.js is an event-based server-side javascript engine.
