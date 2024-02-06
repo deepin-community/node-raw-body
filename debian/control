@@ -9,7 +9,7 @@ Build-Depends:
  , mocha <!nocheck>
  , node-bytes <!nocheck>
  , node-http-errors <!nocheck>
- , node-iconv <!nocheck>
+ , node-iconv-lite <!nocheck>
  , node-unpipe <!nocheck>
  , node-readable-stream <!nocheck>
  , node-safe-buffer <!nocheck>
@@ -24,12 +24,11 @@ Package: node-raw-body
 Architecture: all
 Depends:
  ${misc:Depends}
- , nodejs
  , node-bytes
  , node-http-errors
- , node-iconv
+ , node-iconv-lite
  , node-unpipe
-Provides: nodetypes-raw-body (= ${source:Version})
+Provides: node-types-raw-body (= ${source:Version})
 Description: Request body length validation supporting streams - Node.js
  This module gets the entire buffer of a stream and validates its length
  against an expected length. A limit can also be set, preventing memory
